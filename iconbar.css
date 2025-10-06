@@ -1,0 +1,112 @@
+/* Existing iconbar.css content remains unchanged */
+
+/* Social Bar Styles moved from news.html */
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 3rem; /* fixed width to prevent shifting */
+}
+.social-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border-radius: 9999px;
+    transition: all 0s ease;
+    font-size: 1.25rem;
+    position: relative;
+    overflow: visible; /* allow label to show outside */
+    margin-bottom: 0.25rem;
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    transform: translateX(-100%);
+}
+.social-bar a:nth-child(1) { animation-delay: 0s; }
+.social-bar a:nth-child(2) { animation-delay: 0.1s; }
+.social-bar a:nth-child(3) { animation-delay: 0.2s; }
+.social-bar a:nth-child(4) { animation-delay: 0.3s; }
+.social-bar a:nth-child(5) { animation-delay: 0.4s; }
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.social-bar a:hover {
+    border-radius: 0 0 0 0;
+    color: white;
+    padding-right: 1rem;
+    position: relative;
+    z-index: 10; /* bring hovered icon above others */
+    justify-content: flex-end;
+}
+.social-bar a .label {
+    position: absolute;
+    right: 3rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: 600;
+    font-size: 0.875rem;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding-right: 2rem;
+    padding-left: 3rem;
+     border-radius:  1.5rem 0 0 1.5rem ;
+}
+.social-bar a:hover .label {
+    opacity: 1;
+}
+.linkedin {
+    background: #0077b5;
+}
+.LinkedInL{
+     background: #0077b5;
+}
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.InstagramL{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+
+}
+.whatsapp {
+    background: #25d366;
+}
+.whatsappl{
+     background: #25d366;
+}
+.phone {
+    background: #4caf50;
+}
+.phonel{
+    background: #4caf50;
+}
+
+.apply-now {
+    background: #fbbf24;
+}
+.Applyl{
+    background: #fbbf24;
+}
+
+.apply-now:hover {
+    background: #f59e0b;
+}

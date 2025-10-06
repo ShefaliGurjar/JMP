@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title> Enquiry JMP Paramedical Universit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Fixed Header Styles */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-fixed .logo-text {
+      color: #1e40af;
+    }
+
+    .header-fixed .nav-link {
+      color: #374151;
+    }
+
+    .header-fixed .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-fixed .enquiry-btn {
+      background: #1e40af;
+      color: white;
+    }
+
+    .header-fixed .enquiry-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .header-transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .header-transparent .logo-text {
+      color: black;
+    }
+
+    .header-transparent .nav-link {
+      color: black;
+    }
+
+    .header-transparent .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-transparent .enquiry-btn {
+      background: transparent;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .header-transparent .enquiry-btn:hover {
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans">
+  <header id="mainHeader" class="header-transparent text-sm py-3">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a class="flex items-center space-x-2" href="Index.html">
+          <div class=" flex items-center justify-center">
+            <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+          </div>
+          <div>
+          </div>
+        </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a class="nav-link hover:text-blue-200 transition-colors" href="Index.html">Home</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="about.html">About Us</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="admission.html">Admission</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="courses.html">Courses</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="news.html">News</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="student_section.html">Student Section</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="Career.html">Career</a>
+        <a class="nav-link hover:text-blue-200 transition-colors" href="contact.html">Contact Us</a>
+        <a href="EnqyeryFrom.html"
+          class="enquiry-btn px-4 py-2 rounded-full font-semibold transition-colors inline-block">
+          Enquiry Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="py-12 px-4">
+    <div class="flex flex-col md:flex-row md:space-x-8 max-w-6xl mx-auto">
+
+      <!-- Left Image -->
+      <div class="flex-1 mb-8 md:mb-0">
+        <img src="assets\Contact.jpg" alt="Students" class="w-full rounded-md shadow-lg">
+      </div>
+
+      <!-- Enquiry Box -->
+      <div class="w-full md:w-96 bg-[#0C1C83] rounded-md shadow-lg overflow-hidden">
+
+
+        <!-- Form Box -->
+        <div class="bg-gray-900 p-6">
+
+          <!-- Heading -->
+          <h2 class="text-center text-lg font-bold mb-4 text-white">Admission Enquiry</h2>
+
+          <!-- Register Form -->
+          <form id="enquiryForm" class="space-y-3 text-sm">
+
+            <input type="text" name="name" placeholder="Enter Name *" class="w-full border p-2 rounded" required>
+            <input type="email" name="email" placeholder="Enter Email Address *" class="w-full border p-2 rounded"
+              required>
+            <input type="tel" name="mobile" placeholder="+91 - Enter Mobile Number *" class="w-full border p-2 rounded"
+              required>
+            <input type="tel" name="whatsapp" placeholder="+91 - Enter WhatsApp/Parents No."
+              class="w-full border p-2 rounded">
+
+            <select name="state" class="w-full border p-2 rounded" required>
+              <option value="">Select State *</option>
+              <option>Madhya Pradesh</option>
+              <option>Uttar Pradesh</option>
+              <option>Maharashtra</option>
+            </select>
+
+            <select name="city" class="w-full border p-2 rounded" required>
+              <option value="">Select City *</option>
+              <option>Bhopal</option>
+              <option>Indore</option>
+              <option>Delhi</option>
+            </select>
+
+            <select name="program" class="w-full border p-2 rounded" required>
+              <option value="">Select Program *</option>
+              <option>B.Tech</option>
+              <option>MBA</option>
+              <option>B.Sc Nursing</option>
+            </select>
+
+            <textarea name="message" placeholder="Your enquiry..." class="w-full border p-2 rounded"></textarea>
+
+            <label class="flex items-start text-xs text-gray-600 space-x-2">
+              <input type="checkbox" name="consent" required class="mt-1">
+              <span>I agree to receive information from People's University</span>
+            </label>
+
+            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded">
+              Submit Enquiry
+            </button>
+          </form>
+
+          <!-- Popup -->
+          <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-6 text-center max-w-sm shadow-lg">
+              <h2 id="popupMessage" class="text-lg font-semibold text-gray-800"></h2>
+              <button onclick="closePopup()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                OK
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow-md">
+          <button class="w-full text-left p-4 focus:outline-none focus:bg-blue-50" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold text-gray-800">What are the admission requirements?</span>
+              <span class="text-blue-600">+</span>
+            </div>
+          </button>
+          <div class="hidden p-4 border-t border-gray-200">
+            <p class="text-gray-600">Admission requirements vary by program. Generally, you need to have completed your
+              higher secondary education with a minimum percentage. Please check the specific program details on our
+              website.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md">
+          <button class="w-full text-left p-4 focus:outline-none focus:bg-blue-50" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold text-gray-800">How do I apply for admission?</span>
+              <span class="text-blue-600">+</span>
+            </div>
+          </button>
+          <div class="hidden p-4 border-t border-gray-200">
+            <p class="text-gray-600">You can apply online through our website or fill out the enquiry form above. Our
+              admissions team will contact you with further instructions.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md">
+          <button class="w-full text-left p-4 focus:outline-none focus:bg-blue-50" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold text-gray-800">What programs are offered?</span>
+              <span class="text-blue-600">+</span>
+            </div>
+          </button>
+          <div class="hidden p-4 border-t border-gray-200">
+            <p class="text-gray-600">We offer a wide range of programs including Engineering, Medical, Dental,
+              Management, Nursing, Pharmacy, Law, and Humanities. Visit our Institutes page for more details.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md">
+          <button class="w-full text-left p-4 focus:outline-none focus:bg-blue-50" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold text-gray-800">Is there hostel accommodation available?</span>
+              <span class="text-blue-600">+</span>
+            </div>
+          </button>
+          <div class="hidden p-4 border-t border-gray-200">
+            <p class="text-gray-600">Yes, we provide hostel accommodation for both boys and girls with modern facilities
+              including mess, gym, and recreational areas.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md">
+          <button class="w-full text-left p-4 focus:outline-none focus:bg-blue-50" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold text-gray-800">What is the fee structure?</span>
+              <span class="text-blue-600">+</span>
+            </div>
+          </button>
+          <div class="hidden p-4 border-t border-gray-200">
+            <p class="text-gray-600">Fee structure varies by program. Please contact our admissions office or check the
+              program brochure for detailed fee information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+    <div class="container mx-auto px-4">
+      <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+      <!-- Top Section -->
+      <div class="mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academics</a></li>
+            <li><a href="#" class="hover:text-white">Academic Council</a></li>
+            <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+            <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+            <li><a href="#" class="hover:text-white">Brochure</a></li>
+            <li><a href="#" class="hover:text-white">Alumni</a></li>
+            <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+            <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+            <li><a href="#" class="hover:text-white">Faculties</a></li>
+            <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+            <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+            <li><a href="#" class="hover:text-white">PISR</a></li>
+            <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Annual Report</a></li>
+            <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+            <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+            <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+            <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+            <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+            <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+            <li><a href="#" class="hover:text-white">Newsletter</a></li>
+            <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+            <li><a href="#" class="hover:text-white">NAAC</a></li>
+            <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+            <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+        <p>© 2025 JMP Paramedical University. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Sitemap</a>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms and Conditions</a>
+          <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('mainHeader');
+
+    // Header scroll functionality
+    function handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 100) {
+        header.classList.remove('header-transparent');
+        header.classList.add('header-fixed');
+      } else {
+        header.classList.remove('header-fixed');
+        header.classList.add('header-transparent');
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+  
+  </script>
+    
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("5bzzAKwHhexoL0TnN"); // replace with your EmailJS Public Key
+  })();
+
+  document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_3b55vob","template_pfwo2ef", this)
+      .then(() => {
+        showPopup("✅ Thank you! Your enquiry has been submitted successfully.");
+        this.reset();
+      }, (err) => {
+        console.error("FAILED...", err);
+        showPopup("❌ Sorry, something went wrong. Please try again.");
+      });
+  });
+
+  function showPopup(message) {
+    document.getElementById("popupMessage").innerText = message;
+    document.getElementById("popup").classList.remove("hidden");
+  }
+
+  function closePopup() {
+    document.getElementById("popup").classList.add("hidden");
+  }
+</script>
+
+
+  <script src="chatbot.js"></script>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+    <div class="chatbot-chat-container">
+      <div class="chatbot-chat-header">
+        EVA
+        <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+      </div>
+      <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+      <div class="chatbot-chat-input">
+        <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+        <button onclick="chatbotSendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+  <!-- Social Media Bar -->
+  <div class="social-bar">
+        <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+        </a>
+        <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+        </a>
+        <a href="tel:7000193773" class="phone" aria-label="Phone">
+            <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+        </a>
+        <a href="admission.html" class="apply-now" aria-label="Apply Now">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL"> Apply Now</span>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Section - JMP Paramedical University</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <link rel="stylesheet" href="iconbar.css">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Fixed Header Styles */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-fixed .logo-text {
+            color: #1e40af;
+        }
+
+        .header-fixed .nav-link {
+            color: #374151;
+        }
+
+        .header-fixed .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-fixed .enquiry-btn {
+            background: #1e40af;
+            color: white;
+        }
+
+        .header-fixed .enquiry-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .header-transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .header-transparent .logo-text {
+            color: black;
+        }
+
+        .header-transparent .nav-link {
+            color: black;
+        }
+
+        .header-transparent .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-transparent .enquiry-btn {
+            background: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .header-transparent .enquiry-btn:hover {
+            background: #f3f4f6;
+        }
+
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider-container.active {
+            opacity: 1;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .news-ticker {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .news-ticker-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .news-ticker-label {
+            background: #fbbf24;
+            color: #1e40af;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 16px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .news-ticker-content {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .news-ticker-scroll {
+            display: inline-block;
+            animation: scroll 25s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .news-ticker:hover .news-ticker-scroll {
+            animation-play-state: paused;
+        }
+
+        .recruiters-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .recruiters-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .recruiters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .recruiters-marquee img,
+        .recruiters-grid img {
+            transition: transform 0.3s ease;
+        }
+
+        .recruiters-marquee img:hover,
+        .recruiters-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Custom hover effect for discipline blocks */
+        .discipline-hover {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .discipline-hover:hover {
+            background-color: #5c6ac4;
+            /* blue/purple background */
+            border-color: #5c6ac4;
+            /* border matches background */
+        }
+
+        .discipline-hover:hover .material-symbols-outlined {
+            color: white !important;
+        }
+
+        .discipline-hover:hover+h3,
+        .discipline-hover:hover~h3 {
+            color: white !important;
+        }
+
+
+    </style>
+</head>
+
+<body class="bg-white font-sans">
+    <header id="mainHeader" class="header-fixed bg-white shadow-md text-sm py-3 relative z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a class="flex items-center space-x-2" href="Index.html">
+                    <div class=" flex items-center justify-center">
+                        <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+                    </div>
+                    <div>
+                    </div>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="student_section.html">Student Section</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html">Career</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="contact.html">Contact Us</a>
+                <a href="EnqyeryFrom.html" class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center pt-20">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold my-4">Student Section</h1>
+            </div>
+        </section>
+
+        <!-- News Ticker Section -->
+    
+    <div class="bg-blue-600 text-white py-4 flex justify-start items-center space-x-4 px-4">
+      <a href="Index.html" class="hover:underline">Home</a>
+      <span class="text-blue-200">></span>
+      <span>Student Section</span>
+    </div>
+  <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="flex flex-wrap justify-between gap-3 p-4">
+            <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Student Resources</p>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Syllabus &
+            Curriculum</h2>
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-lg">
+              <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                <p class="text-[#111418] text-base font-bold leading-tight">Detailed Course Outlines</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Detailed Course Outlines with Interactive Diagrams, including theoretical frameworks and historical
+                  context. Example: Course: Advanced Data Analysis, Instructor: Dr. Eleanor Vance, Credits: 4,
+                  Description: This course covers advanced statistical methods and machine learning techniques for
+                  analyzing complex datasets. Topics include regression analysis, time series forecasting, and neural
+                  networks. Prerequisites: Introductory Statistics, Calculus. Assessment: Assignments (40%), Midterm
+                  Exam (30%), Final Project (30%).
+                </p>
+              </div>
+              <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style='background-image: url("https://via.placeholder.com/400x225?text=Syllabus+Diagram");'></div>
+            </div>
+          </div>
+          <div class="flex w-full grow bg-white @container p-4">
+            <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+              <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                style='background-image: url("https://via.placeholder.com/600x400?text=Course+Outline");'></div>
+            </div>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Timetable /
+            Academic Calendar</h2>
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-lg">
+              <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                <p class="text-[#111418] text-base font-bold leading-tight">Schedule and Key Dates</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Schedule and Key Dates with Infographics, enriched with contextual information about academic events.
+                  Example: Fall Semester 2023: Classes Begin: August 28, Add/Drop Deadline: September 11, Midterm Exams:
+                  October 16-20, Thanksgiving Break: November 20-24, Final Exams: December 11-15. Spring Semester 2024:
+                  Classes Begin: January 15, Add/Drop Deadline: January 29, Midterm Exams: March 4-8, Spring Break:
+                  March 18-22, Final Exams: May 6-10.
+                </p>
+              </div>
+              <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style='background-image: url("https://via.placeholder.com/400x225?text=Academic+Calendar");'></div>
+            </div>
+          </div>
+          <div class="flex w-full grow bg-white @container p-4">
+            <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+              <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                style='background-image: url("https://via.placeholder.com/600x400?text=Timetable");'></div>
+            </div>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Results</h2>
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-lg">
+              <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                <p class="text-[#111418] text-base font-bold leading-tight">Performance Analysis</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Comprehensive Performance Analysis with Visual Charts, supplemented by theoretical insights into
+                  assessment methodologies. Example: Course: Introduction to Programming, Student: Ethan Harper, Grade:
+                  A (92%), Course Average: 85%, Distribution: A (20%), B (40%), C (30%), D (10%).
+                </p>
+              </div>
+              <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style='background-image: url("https://via.placeholder.com/400x225?text=Results+Chart");'></div>
+            </div>
+          </div>
+          <div class="flex w-full grow bg-white @container p-4">
+            <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+              <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                style='background-image: url("https://via.placeholder.com/600x400?text=Grade+Distribution");'></div>
+            </div>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Scholarships
+            & Placements</h2>
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-lg">
+              <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                <p class="text-[#111418] text-base font-bold leading-tight">Opportunities and Guidance</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Opportunities and Guidance with Informative Graphics, providing contextual background on industry
+                  trends and career pathways. Example: Scholarship: Merit-Based Scholarship, Eligibility: GPA 3.8 or
+                  higher, Award Amount: $5,000 per year, Application Deadline: June 1. Placement: Internship at Tech
+                  Solutions Inc., Role: Software Development Intern, Requirements: Proficiency in Java, Strong
+                  problem-solving skills, Application Deadline: March 15.
+                </p>
+              </div>
+              <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style='background-image: url("https://via.placeholder.com/400x225?text=Scholarships");'></div>
+            </div>
+          </div>
+          <div class="flex w-full grow bg-white @container p-4">
+            <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+              <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                style='background-image: url("https://via.placeholder.com/600x400?text=Placements");'></div>
+            </div>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Student
+            Testimonials</h2>
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-lg">
+              <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                <p class="text-[#111418] text-base font-bold leading-tight">Experiences and Insights</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Experiences and Insights with Visual Representations, enhanced with theoretical analysis of student
+                  success factors. Example: Testimonial: "My time at People's University has been transformative. The
+                  faculty are incredibly supportive, and the curriculum is challenging yet rewarding. I particularly
+                  enjoyed the research opportunities, which allowed me to apply theoretical knowledge to real-world
+                  problems." - Olivia Bennett, Class of 2023.
+                </p>
+              </div>
+              <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                style='background-image: url("https://via.placeholder.com/400x225?text=Testimonials");'></div>
+            </div>
+          </div>
+          <div class="flex w-full grow bg-white @container p-4">
+            <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+              <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                style='background-image: url("https://via.placeholder.com/600x400?text=Student+Stories");'></div>
+            </div>
+          </div>
+          <div class="flex px-4 py-3 justify-center">
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">
+              <span class="truncate">Load More</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+    <div class="container mx-auto px-4">
+    <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+      <!-- Top Section -->
+      <div class="mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academics</a></li>
+            <li><a href="#" class="hover:text-white">Academic Council</a></li>
+            <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+            <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+            <li><a href="#" class="hover:text-white">Brochure</a></li>
+            <li><a href="#" class="hover:text-white">Alumni</a></li>
+            <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+            <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+            <li><a href="#" class="hover:text-white">Faculties</a></li>
+            <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+            <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+            <li><a href="#" class="hover:text-white">PISR</a></li>
+            <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Annual Report</a></li>
+            <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+            <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+            <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+            <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+            <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+            <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+            <li><a href="#" class="hover:text-white">Newsletter</a></li>
+            <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+            <li><a href="#" class="hover:text-white">NAAC</a></li>
+            <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+            <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+        <p>© 2025 JMP Paramedical All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Sitemap</a>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms and Conditions</a>
+          <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Social Media Bar -->
+    <div class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-l-lg p-2 z-50">
+        <a href="#" class="block p-2 text-blue-600 hover:text-blue-800 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="block p-2 text-blue-400 hover:text-blue-600 transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="block p-2 text-blue-700 hover:text-blue-900 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="block p-2 text-green-500 hover:text-green-700 transition-colors"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="block p-2 text-gray-600 hover:text-gray-800 transition-colors"><i class="fas fa-phone"></i></a>
+    </div>
+
+  <script src="chatbot.js"></script>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+      <div class="chatbot-chat-container">
+          <div class="chatbot-chat-header">
+              EVA
+              <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+          </div>
+          <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+          <div class="chatbot-chat-input">
+              <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+              <button onclick="chatbotSendMessage()">➤</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+  <div class="social-bar">
+        <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+        </a>
+        <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+        </a>
+        <a href="tel:7000193773" class="phone" aria-label="Phone">
+          <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+        </a>
+        <a href="admission.html" class="apply-now" aria-label="Apply Now">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL">  Apply Now</span> 
+        </a>
+    </div>
+
+    <script>
+        // Slider functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slider-container');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Show current slide
+            if (slides[index]) {
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Initialize slider
+        showSlide(currentSlideIndex);
+    </script>
+
+</body>
+
+</html>

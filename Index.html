@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JMP Paramedical University</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <link rel="stylesheet" href="iconbar.css">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            position: relative;
+            height: 80vh;
+        }
+
+        /* Fixed Header Styles */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-fixed .logo-text {
+            color: #1e40af;
+        }
+
+        .header-fixed .nav-link {
+            color: #374151;
+        }
+
+        .header-fixed .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-fixed .enquiry-btn {
+            background: #1e40af;
+            color: white;
+        }
+
+        .header-fixed .enquiry-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .header-transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .header-transparent .logo-text {
+            color: black;
+        }
+
+        .header-transparent .nav-link {
+            color: black;
+        }
+
+        .header-transparent .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-transparent .enquiry-btn {
+            background: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .header-transparent .enquiry-btn:hover {
+            background: #f3f4f6;
+        }
+
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider-container.active {
+            opacity: 1;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .news-ticker {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .news-ticker-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .news-ticker-label {
+            background: #fbbf24;
+            color: #1e40af;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 16px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .news-ticker-content {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .news-ticker-scroll {
+            display: inline-block;
+            animation: scroll 25s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .news-ticker:hover .news-ticker-scroll {
+            animation-play-state: paused;
+        }
+
+        .recruiters-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .recruiters-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .recruiters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .recruiters-marquee img,
+        .recruiters-grid img {
+            transition: transform 0.3s ease;
+        }
+
+        .recruiters-marquee img:hover,
+        .recruiters-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Custom hover effect for discipline blocks */
+        .discipline-hover {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .discipline-hover:hover {
+            background-color: #5c6ac4;
+            /* blue/purple background */
+            border-color: #5c6ac4;
+            /* border matches background */
+        }
+
+        .discipline-hover:hover .material-symbols-outlined {
+            color: white !important;
+        }
+
+        .discipline-hover:hover+h3,
+        .discipline-hover:hover~h3 {
+            color: white !important;
+        }
+
+        /* Enquiry Modal Styles */
+        #enquiryModal {
+            display: none;
+        }
+
+        #enquiryModal.show {
+            display: flex !important;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans">
+    <header id="mainHeader" class="header-fixed bg-white shadow-md text-sm py-3 relative z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a class="flex items-center space-x-2" href="Index.html">
+                    <div class=" flex items-center justify-center">
+                        <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+                    </div>
+                    <div>
+                    </div>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors"
+                    href="admission.html">Admission</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors"
+                    href="student_section.html">Student Section</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html">Career</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="contact.html">Contact
+                    Us</a>
+                <a href="EnqyeryFrom.html"
+                    class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-bg text-white  flex flex-col justify-center items-start text-left relative mx-auto pt-20">
+            <!-- Slider Containers -->
+            <div class="slider-container active"
+                style="background-image: url('assets/img8.jpeg'); background-size: cover; background-position: center;">
+            </div>
+            <div class="slider-container"
+                style="background-image: url('assets/img9.png'); background-size: cover; background-position: center;">
+            </div>
+            <div class="slider-container"
+                style="background-image: url('assets/img7.png'); background-size: cover; background-position: center;">
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="container  mx-auto px-4 ">
+                <div class="max-w-2xl relative z-10">
+                    <h1 class="text-6xl font-bold my-4">JMP Paramedical</h1>
+                    <p class="mb-8 text-xl">For all your Higher Education needs...</p>
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center text-lg"
+                        href="admission.html">
+                        ADMISSION ENQUIRY
+                        <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Ticker Section -->
+        <section class="news-ticker">
+            <div class="news-ticker-container">
+                <div class="news-ticker-label">Latest Updated -</div>
+                <div class="news-ticker-content">
+                    <div class="news-ticker-scroll">
+                        <span class="mr-8">● September 2025! Register Now: Click Here</span>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-4">● Dikharambh
+                            - Orientation 2025 at JMP Paramedical University was a resounding success!</span>
+                        <span class="mr-8">● The Fusion Stage was a Grand Success</span>
+                        <span class="mr-8">● Admission Open 2025</span>
+                        <span class="mr-8">● Don't miss out on our latest programs and opportunities!</span>
+                        <span class="mr-8">● September 2025! Register Now: Click Here</span>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-4">● Dikharambh
+                            - Orientation 2025 at JMP Paramedical University was a resounding success!</span>
+                        <span class="mr-8">● The Fusion Stage was a Grand Success!</span>
+                        <span class="mr-8">● Admission Open 2025</span>
+                        <span class="mr-8">● Don't miss out on our latest programs and opportunities!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+
+                <!-- Left Content -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">About – JMP Paramedical University</h2>
+                    <p class="text-gray-700 mb-4">
+                        JMP Paramedical University – For All Your Higher Education Needs
+                    </p>
+
+                    <!-- Details list -->
+                    <p class="text-gray-600 mb-6">
+                        <span class="font-semibold">11 Premier Institutes</span> |
+                        <span class="font-semibold">88 Comprehensive Programs</span> |
+                        <span class="font-semibold">5000+ Active Learners</span> |
+                        <span class="font-semibold">84 Acres Campus</span> |
+                        <span class="font-semibold">Highest Package 67 LPA</span> |
+                        <span class="font-semibold">11 Institutional Libraries</span> |
+                        <span class="font-semibold">Central Research Lab</span> |
+                        <span class="font-semibold">Facility / Departmental Labs</span> |
+                        <span class="font-semibold">Stadium & Playgrounds</span> |
+                        <span class="font-semibold">Gymnasium</span> |
+                        <span class="font-semibold">1500 Bedded Hospital</span> – Demonstrating Our Commitment to
+                        Academic Excellence and Professional Preparedness
+                    </p>
+
+                    <p class="text-gray-600 mb-6">
+                        Nestled in the vibrant and historic city of Indore – the commercial and cultural hub of Madhya
+                        Pradesh – JMP Paramedical stands as a distinguished institution dedicated to excellence in
+                        healthcare education. With a strong commitment to skill-based learning and holistic development,
+                        it has emerged as a trusted center for aspiring healthcare professionals in Central India.
+                    </p>
+
+                    <a href="about.html"
+                        class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-700 transition">
+                        READ MORE
+                    </a>
+                </div>
+
+                <!-- Right Content (Overlapping images) -->
+                <div class="md:w-1/2 relative flex justify-center">
+                    <!-- Back Image -->
+                    <img src="assets/about.png" alt="Graduation"
+                        class="rounded-lg shadow-lg w-80 md:w-96 object-cover" />
+
+                    <!-- Front Image -->
+                    <img src="assets/trust.png" alt="23 Years of Excellence"
+                        class="absolute bottom-0 left-0 transform translate-x-6 translate-y-6 rounded-lg shadow-xl w-64 md:w-72 object-cover border-4 border-white" />
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="bg-gray-900 py-16">
+            <div class="container mx-auto px-4">
+                <!-- Title -->
+                <div class="text-center mb-10">
+                    <h3 class="text-white text-3xl font-semibold">Disciplines</h3>
+                </div>
+
+                <!-- Responsive Grid (only inner borders visible) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-r border-gray-700 lg:border-b lg:border-r">
+                        <img src="assets/MEDICAL.png" alt="Medical" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Medical</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-r border-gray-700 lg:border-b lg:border-r">
+                        <img src="assets/DENTAL.png" alt="Dental" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Dental College</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-r border-gray-700 lg:border-b lg:border-r">
+                        <img src="assets/HOTEL-MANAGEMENT.png" alt="Hotel Management"
+                            class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Hotel Management</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-r border-gray-700 lg:border-b lg:border-r">
+                        <img src="assets/MANAGEMENT.png" alt="Management" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Management</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-r border-gray-700 lg:border-b lg:border-r">
+                        <img src="assets/ENGINEERING.png" alt="Engineering" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Engineering</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-b border-gray-700 lg:border-b">
+                        <img src="assets/NURSING.png" alt="Nursing" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Nursing</span>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-r border-gray-700 lg:border-r">
+                        <img src="assets/PHARMACY.png" alt="Pharmacy" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Pharmacy</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-r border-gray-700 lg:border-r">
+                        <img src="assets/PARAMEDICAL.png" alt="Paramedical" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Paramedical</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-r border-gray-700 lg:border-r">
+                        <img src="assets/LAW.png" alt="Legal Studies" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Legal Studies</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-r border-gray-700 lg:border-r">
+                        <img src="assets/HUMANITIES.png" alt="Humanities" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Humanities</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6
+                  border-r border-gray-700 lg:border-r">
+                        <img src="assets/LIFE-SCIENCE.png" alt="Life Science" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">Life Science</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6">
+                        <img src="assets/VIEW-ALL.png" alt="View All" class="h-12 md:h-14 lg:h-16 mx-auto">
+                        <span class="mt-3 text-white text-xs md:text-sm font-semibold uppercase">View All</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <!-- Heading -->
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold">Constituent Institutes</h2>
+                </div>
+
+                <!-- Content Box -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-sm">
+                    <p class="text-gray-700 mb-4">
+                        JMP Paramedical, Indore is home to specialized departments dedicated to providing high–quality
+                        paramedical education and hands–on training. Each department fosters an enriching learning
+                        environment that equips students with the knowledge and practical skills required to build
+                        successful healthcare careers.
+                    </p>
+
+                    <p class="text-gray-700 mb-4">
+                        Since its establishment, JMP Paramedical has been guided by its mission: <span
+                            class="italic">“Empowering Healthcare through Skill, Service & Excellence.”</span> This
+                        vision reflects the institute’s unwavering commitment to create centres of learning that
+                        strengthen the healthcare ecosystem.
+                    </p>
+
+                    <p class="text-gray-700">
+                        The programs and departments of JMP Paramedical are duly recognised and approved by relevant
+                        statutory bodies and councils, including the Madhya Pradesh State Paramedical Council and other
+                        allied healthcare authorities. With this strong academic foundation, JMP Paramedical ensures
+                        that every student receives education of the highest standards, paving the way for professional
+                        growth and service to society
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-gray-900 text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <!-- Heading -->
+                <h2 class="text-3xl font-bold mb-12">Academia</h2>
+
+                <!-- Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border border-gray-700">
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <img src="assets/academicians.png" alt="Academicians" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">863</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Academicians</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <img src="assets/courses.png" alt="Courses" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">88</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Courses</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <img src="assets/booksinlibrary.png" alt="Books in Library" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">71000</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Books in Library</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <img src="assets/total-emp.png" alt="Workforce" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">1827</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Total Workforce</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <img src="assets/alumini.png" alt="Alumni" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">39000+</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Alumni</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-gray-700">
+                        <img src="assets/active-students.png" alt="Active Students" class="w-12 h-12 mb-3">
+                        <p class="text-3xl font-bold">4900+</p>
+                        <p class="uppercase text-sm tracking-wide mt-2">Active Students</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <p class="text-blue-600 font-semibold">FROM OUR BLOG</p>
+                    <h2 class="text-3xl font-bold mb-2">Latest Articles</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img alt="Law books and gavel" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf9ayu7xPHQOmjSmh9FRzxWEqKdlTfoBbFfsaNdcxMS1UYjHkWpc4gUk2lJBf0csiyjyaTfb_Lu6yNM-Mj1wazlKTpzckBgtZvuW2U9Fyea6XWij7yRngrJHfaeuSAAF3yNx3XXBDzqXWw3oLlfJUvte791ly-vrhZ9LvX9CpTFbgk-TxduaEcoM3pJc3HMzG_Fl6mlurkxWu9UTjJbR2d9wuUw9G8jkaLZVO75Z3GnP97zjpb7Uk_DBeY0Q1D7bYQ8KhD-JdQct4" />
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500">AUGUST 21, 2023</p>
+                            <h3 class="font-bold text-lg my-2">To learn legal words, trends or information for legal
+                                studies is an important part of the journey.</h3>
+                            <a class="text-blue-600 font-semibold flex items-center" href="#">READ MORE <span
+                                    class="material-symbols-outlined text-sm ml-1">arrow_forward</span></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img alt="MBA illustration" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeKugDavWK2yOnMPnEqF7BxpFkNFmqA2Z3oSr-wF1T7TBQhJk3suTRlIa3HVQvvtk8N5XWG-_YHozzsWe0OD9wdHfjCysLZanNDRlGFKMab9Dk1yTeTJx5Lrpu8TnI9q3NeJvDRU4vUchjtu1qxKAdxQKS3YxX34bN2c1xx4Lk0dsXQXYdcZESOJMOKPa87GCJ8WxEf4Mt3ofYUwazk39-1yJFGLR1-FdBQ8coQLpxw2lwKqid6Q9tgooKj7ToztBX0_cla2oF6hw" />
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500">AUGUST 21, 2023</p>
+                            <h3 class="font-bold text-lg my-2">Guidance, Assistance &amp; Success: Best B-school in MP
+                                for MBA students, in terms of faculty...</h3>
+                            <a class="text-blue-600 font-semibold flex items-center" href="#">READ MORE <span
+                                    class="material-symbols-outlined text-sm ml-1">arrow_forward</span></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img alt="Bingo game" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnALEGr9_lQi-YVFw4ROJLH2WbnZuAX_pN1kPqD3lJQ4h0Z0HW7bDObNG_r6j1bqfSkbiuN7vCRdNscBdw15geu-XH9qlREY9yJt8siC3tXdftn8nbDD-8oh31HFxFlwptHLWE94ANYkXgPe3fw9CRJe7_etoLwdagU6ObSKxkpmm9uMX_XXnkPCw4D4xeB0lWj8Jav-Fl8QzyrU-F1d5BMnjoL_fl_f7FosN9jGZn2EJ9Db6v8vJ8I9a0XQclZ7lewGMY1a_IKgs" />
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500">AUGUST 21, 2023</p>
+                            <h3 class="font-bold text-lg my-2">Scavenging Innovations of the Year for People's
+                                University Students. Our students have got...</h3>
+                            <a class="text-blue-600 font-semibold flex items-center" href="#">READ MORE <span
+                                    class="material-symbols-outlined text-sm ml-1">arrow_forward</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-900 py-16">
+            <div class="container mx-auto px-4">
+                <!-- Title -->
+                <div class="text-center mb-10">
+                    <h3 class="text-white text-3xl font-semibold">Infrastructure</h3>
+                </div>
+
+                <!-- Responsive Grid with only inner borders -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
+
+                    <!-- Row 1 -->
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">pin_drop</span>
+                        <p class="text-3xl font-bold text-white">84</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Acres of Land</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">local_library</span>
+                        <p class="text-3xl font-bold text-white">10</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Institutional Libraries</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">menu_book</span>
+                        <p class="text-3xl font-bold text-white">56</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Departmental Libraries</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 border-b border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">science</span>
+                        <p class="text-3xl font-bold text-white">95</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Teaching Labs</p>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex flex-col items-center justify-center p-6 border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">emergency</span>
+                        <p class="text-3xl font-bold text-white">1500</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Bedded People's Hospital</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">apartment</span>
+                        <p class="text-3xl font-bold text-white">2000</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Residential Facility</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 border-r border-gray-700">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">groups</span>
+                        <p class="text-3xl font-bold text-white">400+</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Staff Quarters</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6">
+                        <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">meeting_room</span>
+                        <p class="text-3xl font-bold text-white">50</p>
+                        <p class="text-gray-300 text-xs md:text-sm font-semibold uppercase">Seminar Rooms</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-blue-50 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-12">Student Testimonial</h2>
+
+                <!-- Slider Wrapper -->
+                <div id="testimonial-slider" class="relative max-w-4xl mx-auto overflow-hidden">
+                    <!-- Slides -->
+                    <div class="flex transition-transform duration-700" id="slides">
+
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-6 px-6">
+                            <!-- Image -->
+                            <div class="relative flex-shrink-0">
+                                <img src="assets/Profile.png" alt="Student"
+                                    class="w-32 h-32 rounded-full object-cover" />
+                                <div class="absolute bottom-0 -left-4 bg-blue-600 text-white p-2 rounded-full">
+                                    <span class="material-symbols-outlined text-3xl">format_quote</span>
+                                </div>
+                            </div>
+                            <!-- Text -->
+                            <div class="text-left">
+                                <p class="text-gray-700 mb-4">
+                                    I feel proud to be associated with People's University, Bhopal. Excellent Placement
+                                    and outstanding experience.
+                                </p>
+                                <p class="font-bold text-blue-800">TESTIMONIAL NAME</p>
+                                <p class="text-gray-500">COMPANY NAME</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-6 px-6">
+                            <div class="relative flex-shrink-0">
+                                <img src="assets/Profile1.png" alt="Student"
+                                    class="w-32 h-32 rounded-full object-cover" />
+                                <div class="absolute bottom-0 -left-4 bg-blue-600 text-white p-2 rounded-full">
+                                    <span class="material-symbols-outlined text-3xl">format_quote</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-gray-700 mb-4">
+                                    The environment here has helped me grow academically and professionally. A great
+                                    place to learn and excel.
+                                </p>
+                                <p class="font-bold text-blue-800">ANOTHER NAME</p>
+                                <p class="text-gray-500">COMPANY NAME</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 (Example) -->
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-6 px-6">
+                            <div class="relative flex-shrink-0">
+                                <img src="assets/Profile2.png" alt="Student"
+                                    class="w-32 h-32 rounded-full object-cover" />
+                                <div class="absolute bottom-0 -left-4 bg-blue-600 text-white p-2 rounded-full">
+                                    <span class="material-symbols-outlined text-3xl">format_quote</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-gray-700 mb-4">
+                                    People's University has been the foundation of my success. The faculty and
+                                    environment are unmatched.
+                                </p>
+                                <p class="font-bold text-blue-800">THIRD NAME</p>
+                                <p class="text-gray-500">COMPANY NAME</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dots -->
+                <div class="flex justify-center mt-6 space-x-2" id="dots"></div>
+            </div>
+        </section>
+
+        <section class="py-16 ">
+            <div class="container mx-auto px-4">
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Esteemed Recruiters</h2>
+
+                </div>
+
+                <!-- Recruiters Grid/Marquee -->
+                <div class="text-center mb-12">
+                    <div class="flex justify-center items-center flex-wrap gap-8 animate-marquee">
+                        <a href="https://www.amazon.jobs/" target="_blank">
+                            <img src="assets/Amazon.png" alt="Amazon" class="w-32 h-20 object-contain" />
+                        </a>
+                        <a href="https://www.capgemini.com/careers/" target="_blank">
+                            <img src="assets/Capgemini.png" alt="Capgemini" class="w-32 h-20 object-contain" />
+                        </a>
+                        <a href="https://www.axisbank.com/careers" target="_blank">
+                            <img src="assets/Axis Bank.png" alt="Axis Bank" class="w-32 h-20 object-contain" />
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="assets/Solar Square.png" alt="Solar Square" class="w-32 h-20 object-contain" />
+                        </a>
+                        <a href="https://www.ril.com/careers" target="_blank">
+                            <img src="assets/Reliance.png" alt="Reliance" class="w-32 h-20 object-contain" />
+                        </a>
+                        <a href="https://www.subros.com/careers" target="_blank">
+                            <img src="assets/subros_limited_logo.jpg" alt="Subros" class="w-32 h-20 object-contain" />
+                        </a>
+                    </div>
+                </div>
+
+
+                <style>
+                    @keyframes marquee {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .animate-marquee {
+                        display: flex;
+                        width: max-content;
+                        animation: marquee 20s linear infinite;
+                    }
+                </style>
+
+
+                <div class="text-center mt-8">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">View All
+                        Recruiters</a>
+                </div>
+        </section>
+
+    </main>
+    <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+        <div class="container mx-auto px-4">
+            <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+            <!-- Top Section -->
+            <div class="mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Academics</a></li>
+                        <li><a href="#" class="hover:text-white">Academic Council</a></li>
+                        <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+                        <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+                        <li><a href="#" class="hover:text-white">Brochure</a></li>
+                        <li><a href="#" class="hover:text-white">Alumni</a></li>
+                        <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+                    </ul>
+
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+                        <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+                        <li><a href="#" class="hover:text-white">Faculties</a></li>
+                        <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+                        <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+                        <li><a href="#" class="hover:text-white">PISR</a></li>
+                        <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+                    </ul>
+
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Annual Report</a></li>
+                        <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+                        <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+                        <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+                        <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+                        <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+                        <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+                    </ul>
+
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+                        <li><a href="#" class="hover:text-white">NAAC</a></li>
+                        <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+                        <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div
+                class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                <p>© 2025 JMP Paramedical All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Sitemap</a>
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms and Conditions</a>
+                    <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Slider functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slider-container');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Show current slide
+            if (slides[index]) {
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Initialize slider
+        showSlide(currentSlideIndex);
+
+        // Testimonial Slider functionality
+        let currentTestimonialIndex = 0;
+        const testimonialSlides = document.querySelectorAll('#slides > div');
+        const totalTestimonialSlides = testimonialSlides.length;
+
+        // Create dots
+        const dotsContainer = document.getElementById('dots');
+        for (let i = 0; i < totalTestimonialSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentTestimonialIndex = i;
+                showTestimonialSlide(currentTestimonialIndex);
+            });
+            dotsContainer.appendChild(dot);
+        }
+
+        const testimonialDots = document.querySelectorAll('#dots > .dot');
+
+        function showTestimonialSlide(index) {
+            // Hide all slides
+            testimonialSlides.forEach(slide => slide.style.display = 'none');
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+
+            // Show current slide
+            if (testimonialSlides[index]) {
+                testimonialSlides[index].style.display = 'flex';
+                if (testimonialDots[index]) {
+                    testimonialDots[index].classList.add('active');
+                }
+            }
+        }
+
+        function nextTestimonialSlide() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonialSlides;
+            showTestimonialSlide(currentTestimonialIndex);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextTestimonialSlide, 5000);
+
+        // Initialize testimonial slider
+        showTestimonialSlide(currentTestimonialIndex);
+
+        // Enquiry Modal Functionality
+        function openEnquiryModal() {
+            document.getElementById('enquiryModal').classList.add('show');
+        }
+
+        function closeEnquiryModal() {
+            document.getElementById('enquiryModal').classList.remove('show');
+        }
+
+        // Show modal on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(openEnquiryModal, 2000); // Show after 2 seconds
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('enquiryModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeEnquiryModal();
+            }
+        });
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="chatbot.js"></script>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+        <div class="chatbot-chat-container">
+            <div class="chatbot-chat-header">
+                EVA
+                <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+            </div>
+            <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+            <div class="chatbot-chat-input">
+                <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+                <input type="file" id="chatbot-fileInput" style="display: none;" accept=".pdf,.doc,.docx">
+                <button onclick="document.getElementById('chatbot-fileInput').click()" title="Upload File">📎</button>
+                <button onclick="chatbotSendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+    <!-- Enquiry Popup Modal -->
+    <div id="enquiryModal"
+        class="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-start justify-center z-50 hidden"
+        style="z-index: 1050;">
+        <div class="bg-white rounded-lg p-4 max-w-md w-full mx-2 overflow-y-auto mt-1">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-800">Admission Enquiry</h2>
+                <button onclick="closeEnquiryModal()"
+                    class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <form id="enquiryForm" class="space-y-3 text-sm">
+
+                <input type="text" name="name" placeholder="Enter Name *" class="w-full border p-2 rounded" required="">
+                <input type="email" name="email" placeholder="Enter Email Address *" class="w-full border p-2 rounded"
+                    required="">
+                <input type="tel" name="mobile" placeholder="+91 - Enter Mobile Number *"
+                    class="w-full border p-2 rounded" required="">
+                <input type="tel" name="whatsapp" placeholder="+91 - Enter WhatsApp/Parents No."
+                    class="w-full border p-2 rounded">
+
+                <select name="state" class="w-full border p-2 rounded" required="">
+                    <option value="">Select State *</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Maharashtra</option>
+                </select>
+
+                <select name="city" class="w-full border p-2 rounded" required="">
+                    <option value="">Select City *</option>
+                    <option>Bhopal</option>
+                    <option>Indore</option>
+                    <option>Delhi</option>
+                </select>
+
+                <select name="program" class="w-full border p-2 rounded" required="">
+                    <option value="">Select Program *</option>
+                    <option>B.Tech</option>
+                    <option>MBA</option>
+                    <option>B.Sc Nursing</option>
+                </select>
+
+                <textarea name="message" placeholder="Your enquiry..." class="w-full border p-2 rounded"></textarea>
+
+                <label class="flex items-start text-xs text-gray-600 space-x-2">
+                    <input type="checkbox" name="consent" required="" class="mt-1">
+                    <span>I agree to receive information from People's University</span>
+                </label>
+
+                <button type="submit"
+                    class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded">
+                    Submit Enquiry
+                </button>
+            </form>
+            <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg p-6 text-center max-w-sm shadow-lg">
+                    <h2 id="popupMessage" class="text-lg font-semibold text-gray-800"></h2>
+                    <button onclick="closePopup()"
+                        class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        OK
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="social-bar">
+        <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+        </a>
+        <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+        </a>
+        <a href="tel:7000193773" class="phone" aria-label="Phone">
+            <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+        </a>
+        <a href="admission.html" class="apply-now" aria-label="Apply Now">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL"> Apply Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("5bzzAKwHhexoL0TnN");
+        })();
+
+        document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_3b55vob", "template_pfwo2ef", this)
+                .then(() => {
+                    showPopup("✅ Thank you! Your enquiry has been submitted successfully.");
+                    this.reset();
+                }, (err) => {
+                    console.error("FAILED...", err);
+                    showPopup("❌ Sorry, something went wrong. Please try again.");
+                });
+        });
+
+        function showPopup(message) {
+            document.getElementById("popupMessage").innerText = message;
+            document.getElementById("popup").classList.remove("hidden");
+        }
+
+        function closePopup() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+    </script>
+
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 text-center max-w-sm shadow-lg">
+            <h2 id="popupMessage" class="text-lg font-semibold text-gray-800"></h2>
+            <button onclick="closePopup()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                OK
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

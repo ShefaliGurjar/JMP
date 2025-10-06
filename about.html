@@ -1,0 +1,363 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - People's University</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="iconbar.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Fixed Header Styles */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-fixed .logo-text {
+            color: #1e40af;
+        }
+
+        .header-fixed .nav-link {
+            color: #374151;
+        }
+
+        .header-fixed .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-fixed .enquiry-btn {
+            background: #1e40af;
+            color: white;
+        }
+
+        .header-fixed .enquiry-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .header-transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .header-transparent .logo-text {
+            color: black;
+        }
+
+        .header-transparent .nav-link {
+            color: black;
+        }
+
+        .header-transparent .nav-link:hover {
+            color: #1e40af;
+        }
+
+        .header-transparent .enquiry-btn {
+            background: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .header-transparent .enquiry-btn:hover {
+            background: #f3f4f6;
+        }
+
+        /* Custom hover effect for discipline blocks */
+        .discipline-hover {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .discipline-hover:hover {
+            background-color: #5c6ac4;
+            /* blue/purple background */
+            border-color: #5c6ac4;
+            /* border matches background */
+        }
+
+        .discipline-hover:hover .material-symbols-outlined {
+            color: white !important;
+        }
+
+        .discipline-hover:hover+h3,
+        .discipline-hover:hover~h3 {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="mainHeader" class="header-fixed bg-white shadow-md text-sm py-3 relative z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a class="flex items-center space-x-2" href="Index.html">
+                    <div class=" flex items-center justify-center">
+                        <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+                    </div>
+                    <div>
+                    </div>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="student_section.html">Student Section</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html ">Career</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="contact.html">Contact Us</a>
+                <a href="EnqyeryFrom.html" class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden"
+        style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <section class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center pt-20">
+                <div class="max-w-2xl">
+                    <h1 class="text-6xl font-bold my-4">About Us</h1>
+        </div>
+      </section>
+      <div class="bg-blue-600 text-white py-4 flex justify-start items-center space-x-4 px-4">
+        <a href="Index.html" class="hover:underline">Home</a>
+        <span class="text-blue-200">></span>
+        <span>About Us</span>
+      </div>
+      <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                        Institute Overview</h2>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-4">
+                        <span> JMP Paramedical, Indore, is a premier institution committed to shaping the future of
+                            healthcare through quality education in paramedical sciences. Established with the vision of
+                            producing competent, ethical, and compassionate healthcare professionals, the institute has
+                            become a trusted name in Central India for paramedical education.</span><br><br>
+
+                        <span> The institute offers a wide range of diploma and degree-level programs in allied health
+                            sciences that integrate rigorous academic coursework with practical exposure. By focusing on
+                            both skill development and professional ethics, JMP Paramedical ensures that its students
+                            are prepared to serve in hospitals, diagnostic centers, research institutions, and
+                            healthcare organizations across the nation.</span><br><br>
+
+                        <span> Through a student-centered approach, modern facilities, and strong hospital affiliations,
+                            JMP Paramedical continues to nurture a generation of healthcare providers who can meet the
+                            growing challenges of the medical field with confidence and excellence.</span>
+                    </p>
+                    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mb-4">
+                        Vision &amp; Mission</h2>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-2">Vision:</p>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                    To be recognized as a center of excellence in paramedical sciences, committed to empowering students
+                    with knowledge, skill, and compassion, thereby strengthening the healthcare delivery system in India
+                    and beyond.
+                    </p>
+
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-2">Mission:</p>
+                    <ul class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 list-disc pl-6 space-y-1">
+                        <li>To provide world-class education in paramedical and allied health sciences.</li>
+                        <li>To promote innovation, research, and evidence-based learning.</li>
+                        <li>To build strong industry and hospital linkages for real-world clinical exposure.</li>
+                        <li>To nurture students with professional ethics, empathy, and leadership qualities.</li>
+                        <li>To contribute to society by creating a skilled workforce that supports and enhances medical
+                            services.</li>
+                    </ul>
+                    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mb-4">
+                        Accreditation / Approvals</h2>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-4">
+                        JMP Paramedical, Indore, is duly recognized and approved by the Madhya Pradesh State Paramedical
+                        Council and affiliated authorities, ensuring that every program adheres to the highest academic
+                        and professional standards.
+
+                        This recognition guarantees that:
+
+                        Students receive quality education aligned with state and national guidelines.
+
+                        Graduates are eligible for career opportunities in hospitals, diagnostic laboratories,
+                        rehabilitation centers, and government healthcare projects.
+
+                        The institute maintains credibility and accountability through regular audits and updates from
+                        statutory bodies.
+                    </p>
+                    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mb-4">
+                        Faculty Profiles</h2>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-4">
+                        The institute prides itself on a team of highly qualified and dedicated faculty members,
+                        including doctors, allied health experts, and seasoned academicians. The faculty not only
+                        delivers subject knowledge but also emphasizes:
+
+                        Practical Training: Hands-on learning in labs and hospitals.
+
+                        Mentorship: Personal guidance for academic and career growth.
+
+                        Research & Innovation: Encouraging students to participate in seminars, workshops, and case
+                        studies.
+
+                        Industry Exposure: Regular guest lectures from industry professionals and healthcare
+                        practitioners.
+
+                        This holistic teaching approach ensures that students gain both technical expertise and the
+                        confidence required to excel in diverse healthcare roles.
+                    </p>
+                    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mb-4">
+                        Infrastructure</h2>
+                    <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 mb-4">
+                        JMP Paramedical offers modern infrastructure designed to support both academic excellence and
+                        practical skill-building. Key facilities include:
+
+                        State-of-the-Art Laboratories: Specialized labs for Medical Lab Technology, Radiology, Operation
+                        Theatre Technology, Physiotherapy, and other allied health programs.
+
+                        Digital Classrooms: Smart classrooms with audio-visual teaching aids for interactive learning.
+
+                        Central Library: A well-stocked library with textbooks, reference materials, journals, and
+                        digital learning resources.
+
+                        Clinical Training Facilities: Partnerships with hospitals and diagnostic centers to provide
+                        real-time patient care exposure.
+
+                        Seminar & Conference Halls: Spaces for academic discussions, workshops, and events.
+
+                        Student Amenities: Hostel accommodation, recreation spaces, and a supportive environment for
+                        holistic student development.
+                    </p>
+                </div>
+            </div>
+            <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+                <div class="container mx-auto px-4">
+                    <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+                    <!-- Top Section -->
+                    <div class="mb-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-white">Academics</a></li>
+                                <li><a href="#" class="hover:text-white">Academic Council</a></li>
+                                <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+                                <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+                                <li><a href="#" class="hover:text-white">Brochure</a></li>
+                                <li><a href="#" class="hover:text-white">Alumni</a></li>
+                                <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+                            </ul>
+
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+                                <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+                                <li><a href="#" class="hover:text-white">Faculties</a></li>
+                                <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+                                <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+                                <li><a href="#" class="hover:text-white">PISR</a></li>
+                                <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+                            </ul>
+
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-white">Annual Report</a></li>
+                                <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+                                <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+                                <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+                                <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+                                <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+                                <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+                            </ul>
+
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+                                <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                                <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+                                <li><a href="#" class="hover:text-white">NAAC</a></li>
+                                <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+                                <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+                                <li><a href="#" class="hover:text-white">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div
+                        class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                        <p>© 2025 JMP Paramedical All rights reserved.</p>
+                        <div class="flex gap-6 mt-4 md:mt-0">
+                            <a href="#" class="hover:text-white">Sitemap</a>
+                            <a href="#" class="hover:text-white">Privacy Policy</a>
+                            <a href="#" class="hover:text-white">Terms and Conditions</a>
+                            <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="chatbot.js"></script>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+        <div class="chatbot-chat-container">
+            <div class="chatbot-chat-header">
+                EVA
+                <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+            </div>
+            <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+            <div class="chatbot-chat-input">
+                <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+                <button onclick="chatbotSendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+    <!-- Social Bar -->
+    <div class="social-bar">
+        <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+        </a>
+        <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+        </a>
+        <a href="tel:7000193773" class="phone" aria-label="Phone">
+            <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+        </a>
+        <a href="admission.html" class="apply-now" aria-label="Apply Now">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL"> Apply Now</span>
+        </a>
+    </div>
+    </div>
+</body>
+
+</html>

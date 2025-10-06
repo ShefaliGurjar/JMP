@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career JMP Paramedical Universit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="iconbar.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img4.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Fixed Header Styles */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-fixed .logo-text {
+      color: #1e40af;
+    }
+
+    .header-fixed .nav-link {
+      color: #374151;
+    }
+
+    .header-fixed .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-fixed .enquiry-btn {
+      background: #1e40af;
+      color: white;
+    }
+
+    .header-fixed .enquiry-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .header-transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .header-transparent .logo-text {
+      color: black;
+    }
+
+    .header-transparent .nav-link {
+      color: black;
+    }
+
+    .header-transparent .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-transparent .enquiry-btn {
+      background: transparent;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .header-transparent .enquiry-btn:hover {
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800">
+  <!-- Hero Section -->
+  <header id="mainHeader" class="header-fixed bg-white shadow-md text-sm py-3 relative z-10">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a class="flex items-center space-x-2" href="Index.html">
+          <div class=" flex items-center justify-center">
+            <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+          </div>
+          <div>
+          </div>
+        </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="student_section.html">Student
+          Section</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html">Career</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="contact.html">Contact Us</a>
+        <a href="EnqyeryFrom.html"
+          class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+          Enquiry Now
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="hero-bg text-white py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold">Contact Us</h1>
+  </section>
+  <div class="bg-blue-600 text-white py-4 flex justify-start items-center space-x-4 px-4">
+    <a href="Index.html" class="hover:underline">Home</a>
+    <span class="text-blue-200">></span>
+    <span>Contact Us</span>
+  </div>
+
+
+  <!-- Contact Section -->
+  <section class="container mx-auto px-6 py-12 grid grid-cols-2  gap-12">
+
+    <!-- Left Column -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold">Phone</h3>
+          <p class="text-gray-600">(555) 123-4567</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Email</h3>
+          <p class="text-gray-600">info@scholarlyheights.edu</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Address</h3>
+          <p class="text-gray-600"> JMP Paramedical, Indore, Madhya Pradesh, India</p>
+        </div>
+      </div>
+    </div>
+    <!-- Right Column (Map) -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6">Our Location</h2>
+      <div class="w-full h-[400px] rounded-lg overflow-hidden shadow">
+        <iframe class="w-full h-full border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.813748418884!2d77.41261431539856!3d23.258485984840506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42d0d8a4d3d5%3A0x4f65a8a7910ec7b!2sPeople&#39;s%20University!5e0!3m2!1sen!2sin!4v1707400000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+    <div class="container mx-auto px-4">
+      <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+      <!-- Top Section -->
+      <div class="mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academics</a></li>
+            <li><a href="#" class="hover:text-white">Academic Council</a></li>
+            <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+            <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+            <li><a href="#" class="hover:text-white">Brochure</a></li>
+            <li><a href="#" class="hover:text-white">Alumni</a></li>
+            <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+            <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+            <li><a href="#" class="hover:text-white">Faculties</a></li>
+            <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+            <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+            <li><a href="#" class="hover:text-white">PISR</a></li>
+            <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Annual Report</a></li>
+            <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+            <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+            <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+            <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+            <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+            <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+            <li><a href="#" class="hover:text-white">Newsletter</a></li>
+            <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+            <li><a href="#" class="hover:text-white">NAAC</a></li>
+            <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+            <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+        <p>© 2025 JMP Paramedical All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Sitemap</a>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms and Conditions</a>
+          <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('mainHeader');
+
+    // Header scroll functionality
+    function handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 100) {
+        header.classList.remove('header-transparent');
+        header.classList.add('header-fixed');
+      } else {
+        header.classList.remove('header-fixed');
+        header.classList.add('header-transparent');
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Initialize header state
+    handleScroll();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="chatbot.js"></script>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+    <div class="chatbot-chat-container">
+      <div class="chatbot-chat-header">
+        EVA
+        <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+      </div>
+      <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+      <div class="chatbot-chat-input">
+        <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+        <button onclick="chatbotSendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+  <!-- Social Bar -->
+  <div class="social-bar">
+    <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+    </a>
+    <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+    </a>
+    <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+    </a>
+    <a href="tel:7000193773" class="phone" aria-label="Phone">
+      <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+    </a>
+    <a href="admission.html" class="apply-now" aria-label="Apply Now">
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL"> Apply Now</span>
+    </a>
+  </div>
+</body>
+
+</html>

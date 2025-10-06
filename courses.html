@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+   <title>Courses - JMP Paramedical University</title>
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="stylesheet" href="iconbar.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    .course-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img3.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Fixed Header Styles */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-fixed .logo-text {
+      color: #1e40af;
+    }
+
+    .header-fixed .nav-link {
+      color: #374151;
+    }
+
+    .header-fixed .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-fixed .enquiry-btn {
+      background: #1e40af;
+      color: white;
+    }
+
+    .header-fixed .enquiry-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .header-transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .header-transparent .logo-text {
+      color: black;
+    }
+
+    .header-transparent .nav-link {
+      color: black;
+    }
+
+    .header-transparent .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-transparent .enquiry-btn {
+      background: transparent;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .header-transparent .enquiry-btn:hover {
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="mainHeader" class="header-fixed bg-white shadow-md text-sm py-3 relative z-10">
+    <div class="px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a class="flex items-center space-x-2" href="Index.html">
+          <div class=" flex items-center justify-center">
+            <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+          </div>
+          <div>
+          </div>
+        </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="student_section.html">Student
+          Section</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html">Career</a>
+        <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="contact.html">Contact Us</a>
+        <a href="EnqyeryFrom.html"
+          class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+          Enquiry Now
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden"
+      style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <section class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center pt-20">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold my-4">Courses &amp; Programs</h1>
+          </div>
+        </section>
+        <div class="bg-blue-600 text-white py-4 flex justify-start items-center space-x-4 px-4">
+          <a href="Index.html" class="hover:underline">Home</a>
+          <span class="text-blue-200">></span>
+          <span>Courses & Programs</span>
+        </div>
+        <div class="px-4 sm:px-8 lg:px-16 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Explore Our Programs</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">
+                  Discover a wide range of diploma and certificate courses designed to prepare you for a successful
+                  career
+                  in healthcare and related fields.
+                </p>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Diploma
+              Courses</h2>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Diploma in Nursing Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      A comprehensive theoretical program covering essential nursing concepts, patient care principles,
+                      and medical ethics.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-1">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>2 Years</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Nursing Concepts, Patient Care Principles, Medical Ethics</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Nurse, Healthcare Professional</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-1')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_QR7k2wIGVnt55fjowYHbyH087IoqumelUiL7dM56mTSF6Mkzo7D0SpQEWxh8BIG32u5Vt8cofn-0hmBr5og63ZEQOjmMFsyxPHhm8xLVUCIQMcUMPXbxC2wh3O6wiVbKfk94sJ_rDFofAzqVIrYE4YpWoMzsQwBsqHebxJQxyocM4vctVgdHN53yzLzWke-nkCm47tnKQRm0pAkn4RS8CxLzXDpAy9We2Dz8QwY7Et19xrL0M36vRiekHgq75m-je1Y9D0zHgMc");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Diploma in Lab Technician Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Learn the theoretical foundations of laboratory testing, sample analysis methodologies, and
+                      equipment maintenance protocols.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-2">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>2 Years</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Laboratory Testing, Sample Analysis Methodologies, Equipment Maintenance Protocols</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Lab Technician, Medical Lab Assistant</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-2')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdihfVVBR33-KOmhhwbUpZ2JJIO6UZY-X5ND9F1zApIi_J8iavtLF15ZowiSJv_GWxRgMa3R-LNUawunwBWzfLP0A9Er67cwjuqmaRrrwZRY0_gOMhv7DS57TuOUrFMhK47LGgGyYpnqJaduoEj-pXOWsA_pSQsGnMo_yExo-p-v0rXHbQYJvDUJJTYxSv_CnJxAlFY8qx9aRbTq1Rg1aUH10d2VnOaUir4-JU2ufdMUh4oxaEE-5Eg0cD7IEPA7zUSfhifSz9Vgc");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Diploma in Radiology Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Gain theoretical expertise in imaging physics, interpretation techniques, and patient safety
+                      regulations.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-3">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>2 Years</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Imaging Physics, Interpretation Techniques, Patient Safety Regulations</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Radiology Technician, Imaging Specialist</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-3')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7LuONvAIAJbVi_EEs6lDa28Z6H7_X75pVBPWja_mnRcq6-aj_yF8LAWhprVGLU-Yigzp_eXqCXZhoSpvnfj5GuFn7r8rwYzs1qyDVyMa1lnJtYwg3Au9QQO7TIS509oZP54FVeH2NZS8PVkHr_OKt8TEKvu9KVTCT3oSFSNyxz0Xo7LEeB2cNuBeQkYdnIrJGU77EGKwLVH2TSgtPwvv8s_CDa_7VM3pJOqGdF9g_Ditjlnx2E0eWRTnd2FuA9fSWx1dV6G0aSU4");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Diploma in Physiotherapy Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Develop a theoretical understanding of rehabilitation principles, exercise physiology, and patient
+                      recovery strategies.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-4">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>2 Years</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Rehabilitation Principles, Exercise Physiology, Patient Recovery Strategies</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Physiotherapist, Rehabilitation Specialist</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-4')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTvRf1Ltbs1LOcQvPiEz7VFG1BgpoRoqgXo7O0iWwVuFR1-9LV71xgQeXrnCPB9RLxOpv02p49SvqRhpf7HMHQi45IwxQdaf8mM6aoamvTYbME12riGcm79vVF2oVT-k9v8D26QDmAoA5CnyRAhAvC8MNyZsPrPl05Xz0SPqMpFdSJsz0pkAVTD8f_OFalMl2k1NQXJtEItoisht5e-IUReQ5SAAFwQIs0aPocv9elw12HlguHoZUf6JOkQ5O0u_SWV_HLIlLe0cs");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Diploma in Emergency Care Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Learn the theoretical basis of emergency medical assistance, pre-hospital care protocols, and
+                      crisis
+                      management.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-5">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>2 Years</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Emergency Medical Assistance, Pre-hospital Care Protocols, Crisis Management</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Emergency Care Provider, Paramedic</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-5')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDdNZReJGsR6hR2o5JWgbbuNNFRawP5xbDHP-lc9IAUhuI8CXLFIG9mur_a-yQm-klkj_P_mM99V4F8u8QsE7PSN2fU5gRBH-bi7UYveMM_SWU_GCC5f27W_FkodI9yGgn4D6faXiA2YxbXp2MkBmWjnrTdwe2z319dFC05cEJPHkq4NTcFBPw6gJ-4MAu95PjClop6AShHIjlX_s4_TSXc4ODfQJbg-2FtgAKkuYetiXYeCQpxmbJoUaglIX1Ti4AH3HHBFEIFSI");'>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+              Certificate
+              Courses</h2>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Certificate in Medical Coding Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Learn the theoretical principles of medical coding, diagnostic classification systems, and billing
+                      procedures.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-6">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>6 Months</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Medical Coding, Diagnostic Classification, Billing Procedures</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Medical Coder, Billing Specialist</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-6')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnmvrTeqYSaFTiZIel7ph1VI5oPTaA7_bM3yDeg7HxDi-yVI4WcsrWNfoWAVOX9tTb7YXMmW8SkrPfCthBq3Wyn-Xk3xPSN4sBDN1H726WV5xWvVI0eQjkn-6HbqEpOXSpjkU-LjHgfRg1e2_aUnbZg9gJ-UkrQMAtEq3vP98V6bxkT8-nZAEgo89U3GdcxHwv5tL2mkl7tS2b4L4b6PKVEPmzSfQUYy_nEiWPfTyPQLHycfCELcbK-vZtl2mW7RtyMXCYrj6-Ed4");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Certificate in Pharmacy Assistant Theory
+                    </p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Understand the theoretical aspects of medication dispensing, inventory management, and
+                      pharmaceutical customer service.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-7">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>6 Months</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Medication Dispensing, Inventory Management, Customer Service</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Pharmacy Assistant, Inventory Clerk</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-7')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvbPEEyjPD43kjhNCEH5Wo32rtR_TgzMTz-Mkc4BfqKFRwYMc-k0Ag09bYV0Llyd0z0c1CqwAat5d1PN_KFqXdq56YPhzzO2jdUp4zwTCglZTeiAegze7E7aLHIAY6EMHSbFzd5yN82VrKn_0msScTuFE-uKht_uBlgLgmU4bYonnzoK924LlxdWeUgnKzQF683RET7LRBHu-atA-xQpWqh2i10PpCUk7XUyafEbqdxUISSVChHoObMmFsmZO2ZIgwChc-BHEIHNU");'>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#111418] text-base font-bold leading-tight">Certificate in Healthcare Management
+                      Theory</p>
+                    <p class="text-[#617589] text-sm font-normal leading-normal">
+                      Gain theoretical insights into healthcare administration, service coordination, and efficiency
+                      improvement strategies.
+                    </p>
+                  </div>
+                  <div class="course-details" id="details-8">
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 class="font-bold">Duration:</h4>
+                      <p>6 Months</p>
+                      <h4 class="font-bold">Eligibility:</h4>
+                      <p>High School Diploma</p>
+                      <h4 class="font-bold">Syllabus:</h4>
+                      <p>Healthcare Administration, Service Coordination, Efficiency Improvement Strategies</p>
+                      <h4 class="font-bold">Career Scope:</h4>
+                      <p>Healthcare Administrator, Service Coordinator</p>
+                    </div>
+                  </div>
+                  <button onclick="toggleDetails('details-8')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-fit">
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <script>
+              function toggleDetails(id) {
+                const details = document.getElementById(id);
+                const button = details.nextElementSibling.querySelector('span');
+                if (details.style.maxHeight === '0px' || details.style.maxHeight === '') {
+                  details.style.maxHeight = details.scrollHeight + 'px';
+                  button.textContent = 'Close Details';
+                } else {
+                  details.style.maxHeight = '0px';
+                  button.textContent = 'View Details';
+                }
+              }
+
+
+            </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="chatbot.js"></script>
+
+            <!-- Chatbot Widget -->
+            <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+              <div class="chatbot-chat-container">
+                <div class="chatbot-chat-header">
+                  EVA
+                  <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+                </div>
+                <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+                <div class="chatbot-chat-input">
+                  <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+                  <button onclick="chatbotSendMessage()">➤</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chatbot Toggle Button -->
+            <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+            <!-- Social Media Bar -->
+            <div class="social-bar">
+              <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram"
+                aria-label="Instagram">
+                <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+              </a>
+              <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+              </a>
+              <a href="tel:7000193773" class="phone" aria-label="Phone">
+                <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+              </a>
+              <a href="admission.html" class="apply-now" aria-label="Apply Now">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL"> Apply Now</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+    <div class="px-4">
+      <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+      <!-- Top Section -->
+      <div class="mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academics</a></li>
+            <li><a href="#" class="hover:text-white">Academic Council</a></li>
+            <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+            <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+            <li><a href="#" class="hover:text-white">Brochure</a></li>
+            <li><a href="#" class="hover:text-white">Alumni</a></li>
+            <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+            <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+            <li><a href="#" class="hover:text-white">Faculties</a></li>
+            <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+            <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+            <li><a href="#" class="hover:text-white">PISR</a></li>
+            <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Annual Report</a></li>
+            <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+            <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+            <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+            <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+            <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+            <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+          </ul>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+            <li><a href="#" class="hover:text-white">Newsletter</a></li>
+            <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+            <li><a href="#" class="hover:text-white">NAAC</a></li>
+            <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+            <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+        <p>© 2025 JMP Paramedical All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Sitemap</a>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms and Conditions</a>
+          <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

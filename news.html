@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>News & Events - JMP Paramedical University</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css" />
+    <link rel="stylesheet" href="iconbar.css" />
+    <style>
+    .course-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img5.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Fixed Header Styles */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-fixed .logo-text {
+      color: #1e40af;
+    }
+
+    .header-fixed .nav-link {
+      color: #374151;
+    }
+
+    .header-fixed .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-fixed .enquiry-btn {
+      background: #1e40af;
+      color: white;
+    }
+
+    .header-fixed .enquiry-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .header-transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .header-transparent .logo-text {
+      color: black;
+    }
+
+    .header-transparent .nav-link {
+      color: black;
+    }
+
+    .header-transparent .nav-link:hover {
+      color: #1e40af;
+    }
+
+    .header-transparent .enquiry-btn {
+      background: transparent;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .header-transparent .enquiry-btn:hover {
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+    <header id="mainHeader" class="bg-white shadow-md text-sm py-3 relative z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a class="flex items-center space-x-2" href="Index.html">
+                    <div class=" flex items-center justify-center">
+                        <img src="assets/logo (2).png" alt="Logo" class="w-26 h-16">
+                    </div>
+                    <div>
+                    </div>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Index.html">Home</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="about.html">About Us</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="courses.html">Courses</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="news.html">News</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="student_section.html">Student Section</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="admission.html">Admission</a>
+                <a class="nav-link text-gray-700 hover:text-blue-600 transition-colors" href="Career.html">Career</a>
+                <a href="EnqyeryFrom.html" class="enquiry-btn bg-blue-600 text-white px-4 py-2 rounded-full font-semibold transition-colors inline-block hover:bg-blue-700">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center">
+        <div class="max-w-2xl">
+            <h1 class="text-6xl font-bold my-4">News & Events</h1>
+            <p class="mb-8">Stay updated with the latest news and events at People's University</p>
+        </div>
+    </section>
+    <div class="bg-blue-600 text-white py-4 flex justify-start items-center space-x-4 px-4">
+      <a href="Index.html" class="hover:underline">Home</a>
+      <span class="text-blue-200">></span>
+      <span>News & Events</span>
+    </div>
+    <main class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Workshops</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Data Analysis Workshop</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    Workshops are intensive, hands-on sessions designed to impart practical skills and knowledge in a specific area. This Data Analysis Workshop will cover advanced
+                    techniques, including regression analysis, machine learning algorithms, and data visualization, with real-world case studies. Participants will gain proficiency
+                    in using industry-standard tools and methodologies. Past workshops have featured guest speakers from leading tech companies and resulted in participants
+                    successfully applying these skills in their research and professional projects.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGSWIi_xA9M-MAK527qtBRO-eib9lM9E3U2Iia6uxGChQH2B4C2vq_viF4TnND9qXhF2KJlPO6wAMH5wMgmNJUPFGPN4n9MtFTO-_C6i1OtgcbvS5mGKKsEkcfQm8AUbyCtmJp8qv3l9LfgNimzGH2wvHAVc2gDyZua1CAJTGf4-TTzxVLrfMOPCVYYMi2p092ALEu_-Ul7iUK4HEVVpYuz1Qg0gXPmnHGKPldKt6FSUhH_v49XQpjds5uQ7S_-cG1jndWcrlNxwE");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1Qap_OuW8_24G5O3OCt_ZJtdHX1CztwXWgE9ngCbaI-KUVjr9Xgypu5-4V9f8qTpUpdG7tsS6DPSJz65FCIwg0HuwnHKvrLvbPNzZJrxhSYHk8tjkkc_oq6NMCkW2ufAHad2pHM2QttEDgJut-jiMDsbzL0XI1w1kXqGNy6oGB0yPKjSrGH8ZkjrqD4wGP8epWqG-D9Xx3NOnqwTM5jTmrfv--sh2Hl51taif6G9Lcz6BIIDyJAku_tWL2H6sWCp1CUkCw_GNsQ0");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Advanced Programming Workshop</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    This workshop focuses on advanced programming techniques, covering topics such as parallel computing, algorithm optimization, and software architecture.
+                    Participants will engage in hands-on projects, applying these skills to solve complex problems. Previous workshops have included collaborations with industry
+                    experts and resulted in participants developing innovative software solutions.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTAEZRidlqQbb8pkXdlhGKoSFTbE6Dlt3f3GCZzVqC76sotNzFZ6odC7uU2M3hpcLHTr_b_hr7ToLTwOTeqX-gY4UOruK447nh4g-9-F05QNxGBBsWgn3CzDgCjA1zYyq5mO6W49J2n2N8gdhveafraqdGTk8_c4k-ctS5CDnQpjozBUU3cRurpfwbCaNU8YkHxNa2w_N9nkDIyMTgkINJgrWobX5rTuQinTHp1dIfHGgxHHYUnMIb7sLaWwx0nTgv0Xzy-ZbvC28");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXAJ6mrFnK0HgcKYWefnuBprN0ZoAXNQi3CbKkIJOI2DyZuZl_PV8T_LJIgAHYv1Mux44mRrhJ0-g7NLmVpHRMX9mx2NTRVWCJrFIAcsQ7Fsmi7o13wsyZOh_0WT7FZWR58zO92QWylK1y143ReHTXFIetljZV1gcChRb8zpyeJX3jHI3XV9iVdUUx_xlPF0h960lm1Zu4zBwwKAAdE8a2Oy-aOYpU23TTCSyjqkWJAAfhpFziHjoJrANA5N6SX7GKSswiVzY-DAg");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Seminars &amp; Guest Lectures</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Artificial Intelligence in Healthcare</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    Seminars and guest lectures provide platforms for experts to share insights and research findings on cutting-edge topics. This lecture by Dr. Anya Sharma will
+                    explore the transformative applications of AI in healthcare, including diagnostics, treatment planning, and patient care. Attendees will learn about the latest
+                    advancements, ethical considerations, and future trends in this rapidly evolving field. Previous lectures have featured renowned researchers and practitioners,
+                    fostering discussions that have led to collaborative research opportunities and innovative project ideas.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPC-tAQ2C-uJsb0yfoJQhhB5Sxa1IiAA-tL0hMwlC6I9Jo7PksMZpRIsLnUM0a8rstjIwA_Y91r56MgSpAF48JJ23NOLcU0wq-1fPNrcrnGGAfktQb72eniN09lu42VTW3n_Oigze7UXG3RvnZW5UwlQWzCZNSJr1DScORgo-mnduZUtBIjPM5Zbj9MIxSHpQvx4pG_KZbO7By_hrO2EfKRYT8d25ghBNGvk_QD7pW_DEpQX9iaJiVCzzqAnY7rx2p6K81E3Kd-IQ");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuyp4dzvhX900QrcnfsBcIx-_gZ95TM7whJnczC4gSDCbpgjpYmh4y1qg053Gxy7Lm6UKYxiF94lil2JeXQR-yr50SP58v3DnHYzQoHv3fxeOjQO-0oyVTHrzTiPUn8lF-oy8GNmvg0I4f8bM7UMAFhjut5wpyecutr776K_3QjoZz5GqghLgiZMh2i5yxMRCEVvZhNTMhE9g3FutOatRv7xQExiyFN6TrnCKVOTSH1g_Nbsy4VWcKxk5t7WC9p0o9loxIkQZjDGc");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Cybersecurity Trends and Challenges</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    A seminar on the latest trends and challenges in cybersecurity, featuring insights from industry leaders and experts. Topics will include emerging threats,
+                    defense strategies, and the future of cybersecurity. Attendees will gain valuable knowledge to enhance their understanding and skills in this critical field.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-mXoUkoOzsnPbyH6g93PJK1Hl26BvDQhry4ALbIsp6qmsC6I7loNfX1WRPkp4HVlk9iQ6l_nFp4cdIxefBtX7CNFhe5tOML0lWJU_WiblDRJ9O7bnkUGeP3xfa1si0Cr37ednopeTxcXNoiyZYe5o4cayiXKNChdfQiOp0QK9HYU7S39NATV84XJ5_d1pTYTKfUmq7WFqL8vdACUyr1ME0xHspkdBTzCCm7S_yqq4OK8AwNDa7D0tWq647WgyKjix-gzgy2o9BBU");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBT1IxMmNI1EGhn-7ZS3F5qXE3zCtC8WhpfCA3de1MP4Cx1cqselY79cX2UiRFn_eGp6keLtSVBbfnQQF3knNnOpVhkSR0pVRAH9q9RG7rDW5hkYYtQ01YNVkBzzDzgDOVpZFdRfAiGzls5n9MTAw6i2iRbBmZNVy5WvgMCFYlgCpAaOI7_iLBhflmRzE11TUjKXuOhZmyHquLGKc_6McEXaQmRl_epOKHrvdWFbhLfCxlZrrV6Ep0Cdo0cp9lVPRYiWY09VaMtNk");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Medical Camps</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Free Health Checkup Camp</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    Medical camps offer essential health services and awareness programs to the community. This free health checkup camp will provide comprehensive health
+                    screenings, including blood pressure, blood sugar, and cholesterol checks, along with consultations with healthcare professionals. The camp aims to promote
+                    preventive healthcare and early detection of health issues among students and staff. Past camps have served hundreds of individuals, providing crucial health
+                    information and referrals for further care.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBOM78j0ODxdwffMxJXkXb0ivTEe_lKuoLEehqfnco9URkm66vfjTEaKVI2WTB1v7881STsC6QMkWthhUvTNQ9Z2TAJcpcKPbbqwnoSK7RkDPAJsoxcrvrUv3Crw45wydPLbiyejAIipYa-MwmhgdkmLIxCt5GF2hKeRSkMDQnnSyqGuwLzuT3C1Fp4goMDpJ1w12hWDdYCpt2-a24e7s5JfJ4QAVXUrSav7hAETy-xJYDEodxcW12CEFZgNBeCAcz00MQRLAY-ME");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuXhLacoUD9ZDbgIiJL-voCaxtjYWfhdaGQqB987J-lB9yk1f1mJX6ueC74emfxuu4_06F-gGsbFOX3m2EnzDYJgS3xXRomlCjjDl1nu96HAXKWBGj-ZsYDFlrXzKMwH75aJNkI9U0c3o33APdA7z57Ux2CBiUb_tn5unXsLJModWRwmUw1oKxs3XfzN2DY3350THcLrAwHi3pWzjARbToem4Bz3Ek10MP-YVZytNIzMniADtvY-ZNMy-MpcHFYd2CCijUIPUzN4k");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Eye Care Camp</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    An eye care camp offering free eye exams, vision screenings, and consultations with ophthalmologists. The camp will also provide information on eye health and
+                    preventive measures. This initiative aims to address common vision problems and promote eye care awareness within the community.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBszmbOZG9ad7V1hVWB8o_jPE074GvwtKX6sy3BQNtyzeIm4Md7NP6gg1Iv3SrlZoEVd1lXawS5vSYrKXfPj5DTInvMLF5ytLG6s1rak6fD-KlB4BsngHJ3xTMUSTiIJ-fnDEGxln8EhUDGQMHuIDcBi1d5NnVWajDe_fg4cebRxbLsoScQtiTIH2oegM38WQ6a6uHdQmk1Y0FQbq4GLExJ9LApDgsJ-keINci_FEPyC2DB9yP-3s7TTM_im0eCZcXdMtejMNkqXOE");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW9iIUP45Yr4BvVt9mKklpdRXeqVX3PTomyTp086pWBIm3YI1pNvbNLJ-11rbd268QXTK1BntzD9A4VVDvnuCvdlYAXni70mt_jCrMbL_OHMH0ZL06y31MU6FH-SRswKdnhEVshgJIoctJfJRlhwmtQiEeVRO_t9m4EED849cC-idxkt94J8kQDRRoerguKeaIaTTolM_X65cFZacTC3B_s7NKk69TOXLuGWzargXaAHPHVT64uoNQr0etXgr7dmfj113sm0Ft4Vk");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Convocation / Annual Day</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Annual Day Celebrations</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    Convocation and Annual Day events celebrate academic achievements and institutional milestones. The Annual Day Celebrations will feature cultural performances
+                    by students, recognition of outstanding faculty and students, and a keynote address by a distinguished alumnus. This event fosters a sense of community and
+                    pride among students, faculty, and alumni. Previous celebrations have included captivating performances, inspiring speeches, and memorable moments of
+                    recognition, strengthening the bonds within the university community.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XaBteKY0jqca0Y4UXT9fUVSZhLjzJnLYD4US1kF8VWiWt1ulYQMvXv9zBxkuz98uUStNzcTTz6j7H_4xHqyX8VfybmMM7P4l5p9AiH6UAH3p032g_huo3TtLVr7VxPmy42SS5smxvDleHggKgVsRwKuOg81iYrDGysikj4dyoDha_lJTFp_4-KQLoH4_tv5hfpfX8_cJYMjnKrqw1ttw4uRo3b81-ogz6yL6psxopPnmwM7u4655ZNz8WegqhWn6NsUwBX2wol4");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0IIUOA_7dXL8sWYt14-Z4jIv2lDCKBjDNnh9bRFfpU4WTSiT-cK7JQm19Idr2TkBc-EgMgNySYsCFWDOh8v0mZ47ulBAFo7bmJEikT6A8oir_bvMOM_JPv8ngjNBsAWcAmGXNiHezuee-4_XHxsCEnTGXOEji5OKVP9Zc8gLw7ZcXVyrInontq71xN6dZbidsrvg_92VxhmjwR6xJAr3uB3uAcy35PQ82h3uEOi52Qfnm9ksrpCHbIM59Nz2je6NPrtbFoHlzLzw");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Graduation Ceremony</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    The annual graduation ceremony honoring the graduating class of 2024. The event will include speeches from university officials, faculty, and student
+                    representatives, along with the presentation of degrees. This ceremony marks the culmination of students' academic journeys and celebrates their achievements.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBESt_JuRvsXY7RAXNrj6IiXkNouXZe57sp_i5SraaoeQpcPv1NyOqeToIu8K4iZruyhiP0XsZBZ7Hv3sNMKX_bdMxbnUQ3PsmaALM5HwsIRzgdKfTWRFOvtThdYkIbkPNlQic2XJNNTzeeGdI8ow3bUctdmihNkuYbk7WcJI6JIU6hDWdR5eAYEuy-XbZQ7fIv43lwFIJ31A4SZVRy9hhhRu8dgTlPpI3DnzcVMsgxU37nuYp8YRx-zt0cgDufymb2vcJPo6D8bUw");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLNT_vcKMsAhthGuc4tcGH7-jnQDVFz5k986WhRxVyZpmtNUrdSHiKWrIKgTmMAEy1bHZ0s_9crVgPoBkZ_HO1fpIUlMb_2KFPI9bD-lhVXa74X05LyqI8XwUx06az2L3UCGCW7KFhBlAsvFXXd8QzXSR5z5KYa4hX8J7e8gKOqNJ6pYnzENIeHKeTn_SnwdojnYa1DYp_VtlY1vv7rcuUAu5ld6a6XllNj-WIO7c0DegZ6IsmHs_g5wU6wQ5q5ZM_LiNIQlbZZsE");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">General News &amp; Events</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Campus Sustainability Initiative</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    An initiative to promote sustainability on campus, including recycling programs, energy conservation measures, and environmental awareness campaigns. Students,
+                    faculty, and staff are encouraged to participate and contribute to a greener campus.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3ZQ_JOxUatZ2gyhI6ZF7W4tQCyWFGoz8tlcY87iwlXl_FbVJSBlZvLlkEy3FLjUD1Td6OqWYQ-1np5-Pcl5EMeuT-cTny8gNoMq5UwB9kaAhm2TQowlhOc9oexYxOfdk8TGx0RwdzTgCcAF7wWwSBXTrGUtMDXwjV1Kl67AWuMFiOM0Qj3mPdxQ7U7mT91pmKemuD1JaDGhmk250t5DlY1kb-sZgxfjFTrNZf5w9piWp-dSGR1EDCMJKag9Ptjb2TQ-IhuGqusxw");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoK707ZynchPb698tsPP8lRl0giVec8LMEI0obCK_CTYSXP_inM1AVS-wRrrEr2g3pmPKbfv7PwCvVKwsNLRrhBprOV2u2-d8G3_R6yP9KRzzeFF_jhzGtatYUYo5Sc80xxad2jt74NXzXw2l3_K8unYtH0aEr2jytHqpa7fjVD8ukSvFGtBGVCgb2tFYfBsDxtqkNVMmuhvJpddXqS4DP_AfZbuq_5JwclH9UYS3yHC1y8asKexh1FageQ1u-NInygCisnG2NiwY");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#111418] text-base font-bold leading-tight">Career Fair 2024</p>
+                  <p class="text-[#617589] text-sm font-normal leading-normal">
+                    The annual career fair connecting students with potential employers from various industries. The event will feature company presentations, networking
+                    opportunities, and on-site interviews. Students are encouraged to attend and explore career prospects.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6N2IizIHd_vEHe9YcIeXAk6YadW1XlwXsaGWQoSKhCZ2K4u9oyfU2a08jjN_Dq6x1gsyU1Gd4kZQlTeSXYORhpr-Na81bNURh4IL18F9C4nar245UWMJKt5LD7tviLgQW3vYUYxkJDc_njVXxHvA44q6Gmsx9JkPVHSdL18WoIe-Y8WO6Mwl29bnOLokR6gS_OYNDkG1ot-iVvPTGth50XXI4nejpWj1ucNv8nQRaXw6H-p8UH4eXyao2va2xZPRY5hx6E_HSM4c");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOzRgPzWSq7Sun6Dp0O8c_Iok7eTOH-bySPB7-4_vuo1Jp2m_WOYGvEm4w_L7j2Eq9jQGGCT_QpSqgrIEjWNnZ7AlGVyB9IMbQKjKwJtwwLj0wxU58bCySPKvIgb7n-7aeuTWQjptvV6u3fv5ecKJOPcwivhIlfzdoOC0pE1zR5O9nCsOwuT7uolZIho7hxHN9yyzV5piq9poMFKoTat81TnDsDvx_4tQKI8csuRHpjUxevHkAsDjaYWh_EDVp8ttkoUlxkOKsVMA");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-center">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Load More</span>
+              </button>
+            </div>
+        </div>
+    </main>
+  <footer class="bg-gray-900 text-gray-300 py-10 text-sm">
+  <div class="container mx-auto px-4">
+  <img src="assets/logo (3).png" alt="Logo" class="h-16 mb-4">
+    <!-- Top Section -->
+    <div class="mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Academics</a></li>
+          <li><a href="#" class="hover:text-white">Academic Council</a></li>
+          <li><a href="#" class="hover:text-white">Board of Studies</a></li>
+          <li><a href="#" class="hover:text-white">Research / PhD</a></li>
+          <li><a href="#" class="hover:text-white">Brochure</a></li>
+          <li><a href="#" class="hover:text-white">Alumni</a></li>
+          <li><a href="#" class="hover:text-white">Handbook Cyber Hygiene</a></li>
+        </ul>
+
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Academic Calendar</a></li>
+          <li><a href="#" class="hover:text-white">Approvals & Recognition</a></li>
+          <li><a href="#" class="hover:text-white">Faculties</a></li>
+          <li><a href="#" class="hover:text-white">Internal Complaint Committee</a></li>
+          <li><a href="#" class="hover:text-white">Grievances Redressal Mechanism</a></li>
+          <li><a href="#" class="hover:text-white">PISR</a></li>
+          <li><a href="#" class="hover:text-white">Institutional Distinctiveness</a></li>
+        </ul>
+
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Annual Report</a></li>
+          <li><a href="#" class="hover:text-white">Monitoring Cell</a></li>
+          <li><a href="#" class="hover:text-white">Media Coverage</a></li>
+          <li><a href="#" class="hover:text-white">Student Grievance</a></li>
+          <li><a href="#" class="hover:text-white">Former Vice Chancellors</a></li>
+          <li><a href="#" class="hover:text-white">Former Registrar</a></li>
+          <li><a href="#" class="hover:text-white">People's Social Media</a></li>
+        </ul>
+
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Doctoral Courses & Notices</a></li>
+          <li><a href="#" class="hover:text-white">Newsletter</a></li>
+          <li><a href="#" class="hover:text-white">Incubation Cell</a></li>
+          <li><a href="#" class="hover:text-white">NAAC</a></li>
+          <li><a href="#" class="hover:text-white">Ordinance & Statutes</a></li>
+          <li><a href="#" class="hover:text-white">Photo Gallery</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400">
+      <p>© 2025 JMP Paramedical All rights reserved.</p>
+      <div class="flex gap-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white">Sitemap</a>
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms and Conditions</a>
+        <a href="#" class="hover:text-white">Refund & Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.remove('header-transparent');
+                header.classList.add('header-fixed');
+            } else {
+                header.classList.remove('header-fixed');
+                header.classList.add('header-transparent');
+            }
+        });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="./chatbot.js"></script>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-widget" class="chatbot-widget" style="display: none;">
+      <div class="chatbot-chat-container">
+          <div class="chatbot-chat-header">
+              EVA
+              <button class="close-btn" onclick="toggleChatbot()" title="Close">×</button>
+          </div>
+          <div class="chatbot-chat-box" id="chatbot-chatBox"></div>
+          <div class="chatbot-chat-input">
+              <input type="text" id="chatbot-userInput" placeholder="Type your message here...">
+              <button onclick="chatbotSendMessage()">➤</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()" title="Open Chat">💬</button>
+
+    <div class="social-bar">
+        <a href="https://www.linkedin.com/in/jmpparamedical/" target="_blank" class="linkedin" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i><span class="label LinkedInL">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/jmp_paramedical/" target="_blank" class="instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i><span class="label InstagramL">Instagram</span>
+        </a>
+        <a href="https://wa.me/7000193773" target="_blank" class="whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i><span class="label whatsappl">WhatsApp</span>
+        </a>
+        <a href="tel:7000193773" class="phone" aria-label="Phone">
+          <i class="fas fa-phone"></i><span class="label phonel">Call Us</span>
+        </a>
+        <a href="admission.html" class="apply-now" aria-label="Apply Now">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="label ApplyL">  Apply Now</span> 
+        </a>
+    </div>
+</body>
+</html>
