@@ -752,61 +752,78 @@
         </section>
 
         <section class="py-16 ">
-            <div class="container mx-auto px-4">
-                <!-- Heading -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Esteemed Recruiters</h2>
+            <div class="text-center mb-12 overflow-hidden relative">
+                <h2 class="text-2xl font-bold mb-6">Recruiters</h2>
 
-                </div>
+                <!-- Inner container with 2/3 width, centered -->
+                <div class="w-2/3 mx-auto overflow-hidden">
+                    <div class="flex animate-marquee">
 
-                <!-- Recruiters Grid/Marquee -->
-                <div class="text-center mb-12">
-                    <div class="flex justify-center items-center flex-wrap gap-8 animate-marquee">
+                        <!-- Logos (1st set) -->
                         <a href="https://www.amazon.jobs/" target="_blank">
-                            <img src="assets/Amazon.png" alt="Amazon" class="w-32 h-20 object-contain" />
+                            <img src="assets/Amazon.png" alt="Amazon" class="w-32 h-20 object-contain mx-8" />
                         </a>
                         <a href="https://www.capgemini.com/careers/" target="_blank">
-                            <img src="assets/Capgemini.png" alt="Capgemini" class="w-32 h-20 object-contain" />
+                            <img src="assets/Capgemini.png" alt="Capgemini" class="w-32 h-20 object-contain mx-8" />
                         </a>
                         <a href="https://www.axisbank.com/careers" target="_blank">
-                            <img src="assets/Axis Bank.png" alt="Axis Bank" class="w-32 h-20 object-contain" />
+                            <img src="assets/Axis Bank.png" alt="Axis Bank" class="w-32 h-20 object-contain mx-8" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="assets/Solar Square.png" alt="Solar Square" class="w-32 h-20 object-contain" />
+                            <img src="assets/Solar Square.png" alt="Solar Square"
+                                class="w-32 h-20 object-contain mx-8" />
                         </a>
                         <a href="https://www.ril.com/careers" target="_blank">
-                            <img src="assets/Reliance.png" alt="Reliance" class="w-32 h-20 object-contain" />
+                            <img src="assets/Reliance.png" alt="Reliance" class="w-32 h-20 object-contain mx-8" />
                         </a>
                         <a href="https://www.subros.com/careers" target="_blank">
-                            <img src="assets/subros_limited_logo.jpg" alt="Subros" class="w-32 h-20 object-contain" />
+                            <img src="assets/subros_limited_logo.jpg" alt="Subros"
+                                class="w-32 h-20 object-contain mx-8" />
+                        </a>
+
+                        <!-- Duplicate logos for smooth infinite scroll -->
+                        <a href="https://www.amazon.jobs/" target="_blank">
+                            <img src="assets/Amazon.png" alt="Amazon" class="w-32 h-20 object-contain mx-8" />
+                        </a>
+                        <a href="https://www.capgemini.com/careers/" target="_blank">
+                            <img src="assets/Capgemini.png" alt="Capgemini" class="w-32 h-20 object-contain mx-8" />
+                        </a>
+                        <a href="https://www.axisbank.com/careers" target="_blank">
+                            <img src="assets/Axis Bank.png" alt="Axis Bank" class="w-32 h-20 object-contain mx-8" />
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="assets/Solar Square.png" alt="Solar Square"
+                                class="w-32 h-20 object-contain mx-8" />
+                        </a>
+                        <a href="https://www.ril.com/careers" target="_blank">
+                            <img src="assets/Reliance.png" alt="Reliance" class="w-32 h-20 object-contain mx-8" />
+                        </a>
+                        <a href="https://www.subros.com/careers" target="_blank">
+                            <img src="assets/subros_limited_logo.jpg" alt="Subros"
+                                class="w-32 h-20 object-contain mx-8" />
                         </a>
                     </div>
                 </div>
+            </div>
 
-
-                <style>
-                    @keyframes marquee {
-                        0% {
-                            transform: translateX(0);
-                        }
-
-                        100% {
-                            transform: translateX(-50%);
-                        }
+            <style>
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
                     }
 
-                    .animate-marquee {
-                        display: flex;
-                        width: max-content;
-                        animation: marquee 20s linear infinite;
+                    100% {
+                        transform: translateX(-50%);
                     }
-                </style>
+                }
 
+                .animate-marquee {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 25s linear infinite;
+                }
+            </style>
 
-                <div class="text-center mt-8">
-                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">View All
-                        Recruiters</a>
-                </div>
         </section>
 
     </main>
