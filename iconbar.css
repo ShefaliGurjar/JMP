@@ -58,7 +58,8 @@
     right: 3rem;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     font-weight: 600;
     font-size: 0.875rem;
     pointer-events: none;
@@ -73,6 +74,7 @@
 }
 .social-bar a:hover .label {
     opacity: 1;
+    transform: translateX(0);
 }
 .linkedin {
     background: #0077b5;
@@ -103,8 +105,8 @@
 .apply-now {
     background: #fbbf24;
 }
-.Applyl{
-    background: #fbbf24;
+.ApplyL{
+    background: #f59e0b;
 }
 
 .apply-now:hover {
