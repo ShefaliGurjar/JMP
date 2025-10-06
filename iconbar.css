@@ -85,10 +85,20 @@
 .instagram {
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
-.InstagramL{
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-
+.InstagramL {
+  background: linear-gradient(45deg, 
+    #f09433 0%, 
+    #e6683c 25%, 
+    #dc2743 50%);
 }
+
+.instagram:hover {
+  background: linear-gradient(45deg, 
+    #dc2743 50%, 
+    #cc2366 75%, 
+    #bc1888 100%);
+}
+
 .whatsapp {
     background: #25d366;
 }
